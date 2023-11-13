@@ -1,17 +1,23 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+   public static void main(String[] args) {
+    int[][] twoD = new int[4][];
+    twoD[0] = new int[1];
+    twoD[1] = new int[2];
+    twoD[2] = new int[3];
+    twoD[3] = new int[4];
+     int i, j, k = 0;
+     for (i=0; i<4; i++)
+         for (j=0; j<i+1; j++) {
+             twoD[i][j] = k;
+             k++;
+         }
+     for (i=0; i<4; i++) {
+              for (j=0; j<i+1; j++)
+                  System.out.print(twoD[i][j] + " ");
+              System.out.println();
+              }
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+          }
     }
-}
+
